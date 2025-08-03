@@ -22,10 +22,23 @@ a:hover{
   margin: auto;
 }
 .head{
- background: linear-gradient(190deg, white , green);
+ background: linear-gradient(150deg, white , green);
  color: white;
  padding: 60px 20px;
  text-align: center;
+}
+.head-img{
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.logo{
+  color: green;
 }
 .navbar{
   display: flex;
@@ -56,6 +69,7 @@ a:hover{
   padding: 30px;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0,05);
+  animation: fadeIn 1.2s ease-in-out;
 }
 .card h2{
   margin-bottom: 20px;
@@ -116,6 +130,17 @@ contact-form{
   height: 150px;
   resize: vertical;
 }
+.btn{
+  display: inline-block;
+  background-color: green;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: none;
+  }
 footer{
   text-align: center;
   color: white;
@@ -123,3 +148,14 @@ footer{
   background: green;
   padding: 20px;
 }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: row;
+    gap: 10px;
+  }
+  }
